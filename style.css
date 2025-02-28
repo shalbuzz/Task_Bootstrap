@@ -19,9 +19,10 @@ nav{
 
 nav .container-fluid{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     max-width: 1192px;
+    
     
 
 }
@@ -43,6 +44,7 @@ nav .container-fluid .navbar-brand{
     display: flex;
     flex: 1;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-bottom: 0 !important;
@@ -52,24 +54,55 @@ nav .container-fluid .navbar-brand{
 }
 
 .container .card-container .card{
-    margin: 0 0 0 20px;
+    margin: 15px 0 0 20px;
+    border-radius: 0%;
     padding: 0;
+    height: 670px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     animation: fadeIn 0.8s ease-out;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
    
 }
 
+.container .card-container .card .card-body{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+   
+}
+
+.container .card-container .card .card-body .card-title{
+   font-size: 23px;
+   font-weight: 500;
+   white-space: normal; 
+   word-wrap: break-word; 
+}
+
+.container .card-container .card .card-body .card-text{
+    font-size: 17px;
+    white-space: normal; 
+    word-wrap: break-word; 
+ }
+ 
+ .card ul .list-group-item{
+    font-size: 15px;
+ }
+
+
 .container .card-container .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 
 .container .card-container .card img{
     width:269.5px;
-    height:351.9px;
+    height:370.9px;
     margin: 0;
     padding: 0;
+    border-radius: 0%;
 }
 .footer-container{
     width: 1200px;
@@ -77,16 +110,20 @@ nav .container-fluid .navbar-brand{
    
 }
 
-.container .card-container .card button{
-  margin-right: 6px;
+.container .card-container .card .btn{
+ margin-right: 6px;
+ margin-top: 5px;
+ padding: 8px 12px 8px 12px;
+ font-size: 16px;
+ 
 
 }
 
 .container .card-container .card .card-body{
    width: 290px;
   
-   
 } 
+
 
 @keyframes fadeIn {
     from {
@@ -119,7 +156,7 @@ nav .container-fluid .navbar-brand{
     }
     
     .container .card-container .card {
-        width: 95%;
+        width: 300px;
         max-width: 350px;
         margin: 10px 0;
     }
@@ -166,7 +203,7 @@ nav .container-fluid .navbar-brand{
     }
     
     .container .card-container .card {
-        width: 95%;
+        width: 100%;
         max-width: 350px;
         margin: 10px 0;
     }
